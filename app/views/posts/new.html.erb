@@ -1,1 +1,9 @@
+<%# 新規投稿ページ(トップページからの遷移) %>
+
 <h1>新規投稿ページ</h1>
+<%= form_with url: "/posts", method: :post, local: true do |form| %>
+<%# 上のform_withは、[/postsのページに、フォームの情報を送りたい]という意味で、postメソッドを指定しているという意味のコード %>
+
+  <%= form.text_field :content %>
+  <%= form.submit '投稿する' %>
+<% end %>
